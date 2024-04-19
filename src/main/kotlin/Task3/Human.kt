@@ -2,10 +2,10 @@ package Task3
 
 data class Human(var height: Double? = null, var gender: Gender? = null) {
 
-    fun calculateWeight(): Double? {
+    fun calculateWeight(): Double {
         val currentHeight = height ?: return 0.0
 
-        return currentHeight?.let { c ->
+        return currentHeight.let { c ->
 
             when (gender) {
                 Gender.Male -> {
